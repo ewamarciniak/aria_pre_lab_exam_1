@@ -17,6 +17,10 @@ var Converter = (function() {
         },
 
         convertFromMetricToImperial: function(weight) {
+            var num = parseInt(weight);
+            if (isNaN(num) == true) {
+                throw new Error("Not a number");
+            }
             return weight * converterValue;
         }
 
